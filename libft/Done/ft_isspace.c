@@ -5,6 +5,8 @@
  * otherwise, returns 0.
  */
 
+#include "libft.h"
+
 int	ft_isspace(int c)
 {
 	return (c == '\t' || c == '\n' || c == '\v'

@@ -1,4 +1,5 @@
 /*
+* void ft_striteri(char *s, void (*f)(unsigned int, char*))
 * s - The string on which to iterate.
 * f - The function to apply to each character.
 *
@@ -9,6 +10,8 @@
 *
 * Return None.
 */
+
+#include "libft.h"
 
 void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

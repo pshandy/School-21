@@ -1,11 +1,15 @@
-int		ft_strlen(const char *str);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
 /*
-* function copies up to Fa size - 1 characters from the NUL-terminated
+* size_t ft_strlcpy (char *dst, const char *src, size_t size)
+*
+* Copies up to Fa size - 1 characters from the NUL-terminated
 * string Fa src to Fa dst , NUL-terminating the result.
+*
+* Return: pointer to the destination string dest.
 */
 
-size_t	ft_strlcpy (char *dst, const char *src, size_t size)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	len;
 
@@ -17,5 +21,5 @@ size_t	ft_strlcpy (char *dst, const char *src, size_t size)
 		ft_memcpy(dst, src, size - 1);
 		dst[size - 1] = '\0';
 	}
-	return(len);
+	return (len);
 }

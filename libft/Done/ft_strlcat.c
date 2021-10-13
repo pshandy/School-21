@@ -1,4 +1,4 @@
-int ft_strlen(const char *str);
+#include "libft.h"
 
 size_t ft_strlcat (char *dst, const char *src, size_t size)
 {

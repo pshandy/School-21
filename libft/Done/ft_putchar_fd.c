@@ -1,10 +1,11 @@
 /*
+* void ft_putchar_fd(char c, int fd)
 * c - The character to output.
 * fd - The file descriptor on which to write.
 *
 * Outputs the character
 *
-* Return None.
+* Return: None.
 */
 
 #include "libft.h"
