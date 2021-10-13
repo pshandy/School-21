@@ -52,7 +52,7 @@ fclean1	:	clean
 
 test	:	all
 	@$(CC) $(FLAGS) -c Test.c
-	@$(CC) $(FLAGS) -o test Test.c libft.a
+	@$(CC) $(FLAGS) Test.c libft.a #-0
 	./test.exe
 	@rm -f $(OBJ) $(OBJ_B)
 	@$(RM) test.exe #Test
