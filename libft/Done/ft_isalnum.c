@@ -1,7 +1,14 @@
-int ft_isalpha(int c);
-int ft_isdigit(int c);
+/*
+ * int ft_isalnum(int c)
+ *
+ * Checks for an alphanumeric character.
+ * 
+ * Return: 0 or 1.
+ */
 
-int ft_isalnum(int c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
 }
