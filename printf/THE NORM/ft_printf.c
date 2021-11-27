@@ -50,10 +50,18 @@ void	print_string()
 	return ;
 }
 
-int	_ft_printf(const char *c, va_list vlist)
+int	check_char(char *c)
 {
-	int		index;
-	t_props	props;
+	if (*c == 'd' || *c == 'i' || *c == 'u' || *c == 'x' || *c == 'X')
+		print_number();
+	else if (*c == 'p')
+		print_pointer();
+	else if (*c == 'c')
+		print_char(props, vlist, c++, index++);
+	else if (*c == '%')
+		print_percent();
+	else if (*c == 's')
+		print_string();
 }
 
 int	_ft_printf(const char *c, va_list vlist)
@@ -72,16 +80,7 @@ int	_ft_printf(const char *c, va_list vlist)
 		}
 		else
 			c++;
-		if (*c == 'd' || *c == 'i' || *c == 'u' || *c == 'x' || *c == 'X')
-			print_number();
-		else if (*c == 'p')
-			print_pointer();
-		else if (*c == 'c')
-			print_char(props, vlist, c++, index++);
-		else if (*c == '%')
-			print_percent();
-		else if (*c == 's')
-			print_string();
+		check_char(c);
 	}
 	return (index);
 }

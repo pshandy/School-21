@@ -6,6 +6,27 @@ static int	ft_isspace(int c)
 		|| c == '\f' || c == '\r' || c == ' ');
 }
 
+int	ft_isdigit(int c)
+{
+	return (c >= '0' && c <= '9');
+}
+
+void	ft_putchar(char c, int idx)
+{
+	(void)idx;
+	write(1, &c, 1);
+}
+
+size_t	ft_strlen(const char *str)
+{
+	const char	*end;
+
+	end = str;
+	while (*end != '\0')
+		end++;
+	return (end - str);
+}
+
 int	ft_atoi(const char *nptr)
 {
 	char	sign;
